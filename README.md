@@ -16,12 +16,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./training_history.png "Model Visualization"
-[image2]: ./examples/placeholder.png "Grayscaling"
-[image3]: ./examples/placeholder_small.png "Recovery Image"
-[image4]: ./examples/placeholder_small.png "Recovery Image"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
-[image6]: ./examples/placeholder_small.png "Normal Image"
-[image7]: ./examples/placeholder_small.png "Flipped Image"
+
 
 ## Solution
 ### Model Architecture
@@ -66,7 +61,7 @@ And my final performance was as such:
 
 ![alt text][image1]
 
-
+---
 ### DATA SET 
 #### 1. Data Collection
 
@@ -93,3 +88,17 @@ First, I took each center image and added it with its assigned angle to the imag
 
 The flipped image will help generalize the model to both left and right turns. The left and right images will help train the car to stay in the middle of the lane.
 
+---
+### Results
+#### Track 1
+
+Track 1 results can be seen in the video run1.mp4. I let the car be driven autonomously at around 10 mph around the track and it performed beautifully. In fact, I am able to let the car drive around at this speed for quite a long time without any issues. I also tested at higher speeds and generally, even at a maxed out speed it can get around a few times before any safety issues. 
+
+#### Track 2
+
+To be blunt, my model was horrible at handling track 2. It was able to do decent in non-shaded areas that were not adjacent to other roadways. I believe if I am to successfully accomplish this track it is clear I need training data from the second track as well. To me, this proves two things. Currently, my model is at least mildly overfit to the first track data set and secondly, data is king. The more data we have, the better off our model will be. 
+
+---
+### Conclusion
+
+After hours tuning the model and multiple sets of training data, it became clear to me how important the data you use to train your machine learning models. Firstly, it must be of high quality. Having bad data in the set is crippling to the performance of your final model. Second, the more data you have the better off your final performance will be as the model grows significantly better with the larger data sets!
